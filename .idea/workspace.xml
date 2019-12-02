@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="910b24ef-31ba-4c16-aa01-84015b81e391" name="Default Changelist" comment="">
+    <list default="true" id="910b24ef-31ba-4c16-aa01-84015b81e391" name="Default Changelist" comment="Добавлен контроллер TestController (ДЗ 5.2)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +121,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -149,7 +151,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575286334044</updated>
-      <workItem from="1575286338943" duration="457000" />
+      <workItem from="1575286338943" duration="808000" />
     </task>
     <task id="LOCAL-00001" summary="Init project (ДЗ 5.1)">
       <created>1575286538169</created>
@@ -165,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575286561990</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавлен контроллер TestController (ДЗ 5.2)">
+      <created>1575286960724</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575286960724</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,13 +182,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init project (ДЗ 5.1)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init project (ДЗ 5.1)" />
+    <MESSAGE value="Добавлен контроллер TestController (ДЗ 5.2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен контроллер TestController (ДЗ 5.2)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="590" y="118" key="CommitChangelistDialog2" timestamp="1575286561224">
+    <state x="590" y="118" key="CommitChangelistDialog2" timestamp="1575287145261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="590" y="118" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1575286561224" />
+    <state x="590" y="118" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1575287145261" />
+    <state x="463" y="165" key="SettingsEditor" timestamp="1575287046173">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="463" y="165" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1575287046173" />
     <state x="668" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1575286339733">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
