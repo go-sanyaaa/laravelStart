@@ -7,21 +7,22 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function getOne() {
-        $test = new TestBasicService();
+    private $test;
 
-        return response()->json($test->getParams());
+    public function getOne() {
+        $this->test = TestBasicService::create();
+
+        return response()->json($this->test->getParams());
     }
 
     public function setOne(Request $request) {
         $requestBody = json_decode($request->getContent());
+        $name = $requestBody->name ?? 'Man';
+        $age = $requestBody->age ?? 18;
+        $male = $requestBody->male ?? true;
 
-        $test = new TestBasicService();
+        $this->test = TestBasicService::create($name, $age, $male);
 
-        $test->setName($requestBody->name ?? 'Man');
-        $test->setAge($requestBody->age ?? 18);
-        $test->setMale($requestBody->male ?? true);
-
-        return response()->json($test->getValues());
+        return response()->json($this->test->getValues());
     }
 }
