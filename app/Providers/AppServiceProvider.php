@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Http\Controllers\TestController;
+use App\Services\TestBasicService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(TestController::class, function() {
+            return new TestController(new TestBasicService());
+        });
+
+        $this->app->alias(TestController::class,'controller.test');
     }
 
     /**
