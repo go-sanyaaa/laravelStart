@@ -19,5 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'test','as' => 'test.'],function() {
     Route::get('/one', 'TestController@getOne');
-    Route::post('/one', 'TestController@setOne');
+    Route::post('/one', 'TestController@setOne')->middleware('api.key');
 });
