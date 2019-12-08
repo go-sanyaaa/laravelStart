@@ -12,7 +12,7 @@ class TestOne {
     public function getParams() {
         $array = [];
         foreach ($this as $key => $value) {
-            array_unshift($array, [$key => $value]);
+            $array[$key] = gettype($value);
         }
         return $array;
     }
