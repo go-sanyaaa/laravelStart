@@ -44,7 +44,7 @@ class TestController extends Controller
     public function getOne() {
         $test = new TestOne();
 
-        dd($test->getParams());
+        return response()->json($test->getParams());
     }
 
     public function setOne(Request $request) {
