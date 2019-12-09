@@ -14,17 +14,18 @@ class TestController extends Controller
     }
 
     public function getOne() {
-        return response()->json($this->testBasicService->getParams());
+        return response()->json($this->testBasicService->getTestOneParams());
     }
 
     public function setOne(Request $request) {
         $requestBody = json_decode($request->getContent());
 
-        $this->testBasicService->setAge($requestBody->age ?? 18);
-        $this->testBasicService->setName($requestBody->name ?? 'Man');
-        $this->testBasicService->setMale($requestBody->male ?? true);
+        $age = $requestBody->age ?? 18;
+        $name = $requestBody->name ?? 'Man';
+        $male = $requestBody->male ?? true;
 
+        $response = $this->testBasicService->setTestOne($age, $name, $male);
 
-        return response()->json($this->testBasicService->getValues());
+        return response()->json($response);
     }
 }

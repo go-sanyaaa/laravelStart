@@ -2,42 +2,24 @@
 
 namespace App\Services;
 
+use App\TestOne;
+
 class TestBasicService {
-    private $age = 22;
-    private $name = 'Alexander';
-    private $male = true;
+    private $testOne;
 
-    public function __construct($name = 'Alex', $age = 18, $male = true){
-        $this->age = $age;
-        $this->name = $name;
-        $this->male = $male;
+    public function __construct(TestOne $testOne){
+        $this->testOne = $testOne;
     }
 
-    public function getParams() {
-        $array = [];
-        foreach ($this as $key => $value) {
-            $array[$key] = gettype($value);
-        }
-        return $array;
+    public function getTestOneParams() {
+        return $this->testOne->getParams();
     }
 
-    public function getValues() {
-        $array = [];
-        foreach ($this as $key => $value) {
-            $array[$key] = $value;
-        }
-        return $array;
-    }
+    public function setTestOne($age, $name, $male) {
+        $this->testOne->setName($name);
+        $this->testOne->setAge($age);
+        $this->testOne->setMale($male);
 
-    public function setAge($age) {
-        $this->age = $age;
-    }
-
-    public function setName($name) {
-        $this->name = $name;
-    }
-
-    public function setMale($male) {
-        $this->male = $male;
+        return $this->testOne->getValues();
     }
 }
