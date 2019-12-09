@@ -4,17 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Services\TestBasicService;
 use Illuminate\Http\Request;
+use App\Facades\TestBasicServiceFacade;
 
 class TestController extends Controller
 {
-    private $testBasicService;
-
-    public function __construct(TestBasicService $testBasicService) {
-        $this->testBasicService = $testBasicService;
-    }
-
     public function getOne() {
-        return response()->json($this->testBasicService->getTestOneParams());
+        return response()->json(TestBasicServiceFacade::getTestOneParams());
     }
 
     public function setOne(Request $request) {
@@ -24,7 +19,7 @@ class TestController extends Controller
         $name = $requestBody->name ?? 'Man';
         $male = $requestBody->male ?? true;
 
-        $response = $this->testBasicService->setTestOne($age, $name, $male);
+        $response = TestBasicServiceFacade::setTestOne($age, $name, $male);
 
         return response()->json($response);
     }
