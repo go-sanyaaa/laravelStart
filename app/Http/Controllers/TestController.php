@@ -5,9 +5,14 @@ namespace App\Http\Controllers;
 use App\Services\TestBasicService;
 use Illuminate\Http\Request;
 use App\Facades\TestBasicServiceFacade;
+use App\Test;
 
 class TestController extends Controller
 {
+    public function get($id) {
+        return response()->json(Test::getById($id));
+    }
+
     public function getOne() {
         return response()->json(TestBasicServiceFacade::getTestOneParams());
     }
