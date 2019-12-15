@@ -21,6 +21,10 @@ class TestController extends Controller
         return Test::searchByText($request->text);
     }
 
+    public function test() {
+        return response('my first test',200);
+    }
+
     public function setOne(Request $request) {
         $requestBody = json_decode($request->getContent());
 
