@@ -21,4 +21,8 @@ class Test extends Model
 
         return $replicate;
     }
+
+    public static function getById($id){
+        return Test::find($id);
+    }
 }
