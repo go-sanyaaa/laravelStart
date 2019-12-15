@@ -25,4 +25,9 @@ class Test extends Model
     public static function getById($id){
         return Test::find($id);
     }
+
+    public static function searchByText($text) {
+        $result = Test::where('text','like',"%{$text}%")->get();
+        return $result->count() ? $result : null;
+    }
 }
