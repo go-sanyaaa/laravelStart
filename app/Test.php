@@ -10,4 +10,15 @@ class Test extends Model
     protected $casts = [
         'is_enabled' => 'boolean'
     ];
+
+    public static function getAndUpdateMaxId() {
+        $test = Test::latest('id')->first();
+        $replicate = clone $test;
+
+        $test->text = 'So what about pepito?';
+        $test->is_enabled = 1;
+        $test->save();
+
+        return $replicate;
+    }
 }
