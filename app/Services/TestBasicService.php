@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Exceptions\MyTestException;
+use App\Test;
 use App\TestOne;
 
 class TestBasicService {
@@ -21,5 +23,15 @@ class TestBasicService {
         $this->testOne->setMale($male);
 
         return $this->testOne->getValues();
+    }
+
+    public function getException($id = 11) {
+        $test = Test::find($id);
+
+        if($test) {
+            throw new MyTestException();
+        }
+
+        return $test;
     }
 }
