@@ -13,7 +13,7 @@ class CreateTestTable extends Migration
      */
     public function up()
     {
-        Schema::create('test', function (Blueprint $table) {
+        Schema::create('tests', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('text');
             $table->tinyInteger('is_enabled')->default(0);
