@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @method static getTestOneParams()
- * @method static setTestOne(int $age, string $name, bool $male)
+ * @method static setTestOne(int $age, string $name,
+ * @method getForMock(string $var)
  * @see \App\Services\TestBasicService
  */
 class TestBasicServiceFacade extends Facade {
