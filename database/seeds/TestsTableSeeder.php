@@ -12,8 +12,6 @@ class TestsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Test::class, 10)->create()->each(function($test) {
-            $test->save(factory(Test::class)->make()->toArray());
-        });
+        factory(Test::class, 10)->create();
     }
 }
