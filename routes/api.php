@@ -18,8 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['prefix' => 'test','as' => 'test.'],function() {
+    Route::get('/search','TestController@search');
     Route::get('/one', 'TestController@getOne');
     Route::get('{id}',['uses' => 'TestController@get']);
-    Route::get('/one', 'TestController@getOne');
     Route::post('/one', 'TestController@setOne')->middleware('api.key');
 });

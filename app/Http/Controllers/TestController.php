@@ -17,6 +17,10 @@ class TestController extends Controller
         return response()->json(TestBasicServiceFacade::getTestOneParams());
     }
 
+    public function search(Request $request) {
+        return Test::searchByText($request->text);
+    }
+
     public function setOne(Request $request) {
         $requestBody = json_decode($request->getContent());
 
