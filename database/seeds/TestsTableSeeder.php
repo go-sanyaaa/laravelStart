@@ -1,0 +1,19 @@
+<?php
+
+use App\Test;
+use Illuminate\Database\Seeder;
+
+class TestsTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        factory(Test::class, 10)->create()->each(function($test) {
+            $test->save(factory(Test::class)->make()->toArray());
+        });
+    }
+}
