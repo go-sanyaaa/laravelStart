@@ -3,10 +3,12 @@
 namespace Tests\Unit;
 
 use App\UselessTest;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\TestCase;
 
 class UselessTestTest extends TestCase
 {
+    use DatabaseTransactions;
     /**
      * A basic unit test example.
      *
